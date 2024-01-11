@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Session Created By Admin User</title>
+</head>
+<body>
+
+
+
+<div>
+    <h2>Session Invitation</h2>
+
+    Current Session ID is <span th:text="${sessionId}" />
+</div>
+
+
+<div>
+    <form th:action="@{/join/}" method="get">
+        <input type="submit" value="View Restaurant Submitted by Others" />
+    </form>
+</div>
+
+<div align="center">
+  
+    <form action="#" th:action="@{/invite}" method="post" th:object="${user}">
+        <label>Full name:</label>
+        <input type="text" th:field="*{userId}" /><br/>
+
+ <br/>
+        <input type="submit" value="Invite" />
+
+        <h3>Invited Users</h3>
+        <div class="col-md-6">
+
+            <table >
+
+                <tbody>
+
+                <tr th:each="userid : ${users}">
+                    <td th:text="${userid}"></td>
+
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </form>
+</div>
+
+
+
+</div>
+</body>
+</html>

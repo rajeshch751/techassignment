@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Spring Boot Session Example</title>
+</head>
+
+<script>
+        function autoRefresh() {
+            window.location = window.location.href;
+        }
+        setInterval('autoRefresh()', 30000);
+  </script>
+<body>
+	<!--<div>
+		<form th:action="@{/persistMessage}" method="post">
+			<textarea name="msg" cols="40" rows="2"></textarea>
+			<br> <input type="submit" value="Save Message" />
+		</form>
+	</div>-->
+	<form th:action="@{/destroy}" method="get" >
+	<div>
+		<h2>Messages</h2>
+		<ul th:each="message : ${sessionMessages}">
+			<input type="checkbox" name="selected" th:text="${message}" th:value="${message}">msg</input>
+		</ul>
+	</div>
+	<!--<div>
+		<h2>Session ID</h2>
+		Current Session ID is <span th:text="${sessionId}" />
+	</div>-->
+	<div>
+
+			<input type="submit" value="Submit Restaurant" />
+
+	</div>
+	</form>
+
+</body>
+</html>
