@@ -10,7 +10,7 @@ Let me showcase,application run and output for Task
 First 2 steps, Please go through this document : https://github.com/rajeshch751/techassignment/blob/master/Application%20Setupand%20Run.pdf
 
 
-From next steps
+From next steps : https://github.com/rajeshch751/techassignment/issues/1
 
 Login as admin --> i.e  /admin/login --->  sent to invite USER 1 ,USER 2 ,USER 3
 
