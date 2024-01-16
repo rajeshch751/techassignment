@@ -30,6 +30,8 @@ public class SpringSessionController {
 		return "index";
 	}
 
+
+
 	@PostMapping("/persistMessage")
 	public String persistMessage(@RequestParam("msg") String msg, HttpServletRequest request,Model model) {
 		@SuppressWarnings("unchecked")
