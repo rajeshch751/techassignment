@@ -28,13 +28,10 @@ public class UserConfig1 {
     protected void configure(HttpSecurity http) throws Exception {
 
         http
-                .antMatcher("/user1/**")
+                .csrf().disable()
                 .authorizeRequests().anyRequest().authenticated()
-                .and().formLogin().loginPage("/user1/login")
-
-                .permitAll();
-
-        http.csrf().disable();
+                .and()
+                .httpBasic();
 
 
     }

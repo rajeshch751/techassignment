@@ -26,14 +26,20 @@ public class SpringSecurityConfig  {
     // custom 403 access denied handler
     protected void configure(HttpSecurity http) throws Exception {
 
-        http
+        /*http
                 .antMatcher("/admin/**")
                 .authorizeRequests().anyRequest().authenticated()
                 .and().formLogin().loginPage("/admin/login")
 
                 .permitAll();
 
-        http.csrf().disable();
+        http.csrf().disable();*/
+
+        http
+                .csrf().disable()
+                .authorizeRequests().anyRequest().authenticated()
+                .and()
+                .httpBasic();
 
 
     }

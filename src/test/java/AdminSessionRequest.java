@@ -13,7 +13,7 @@ public class AdminSessionRequest {
 
     private TestRestTemplate testRestTemplate;
     String testUrl = "http://localhost:8080/";
-    URI uri = URI.create(testUrl+"login");
+    URI uri = URI.create(testUrl);
     RestTemplate restTemplate = new RestTemplate();
     ResponseEntity<String> firstRequest(RestTemplate restTemplate, URI uri) {
         HttpHeaders headers = new HttpHeaders();
